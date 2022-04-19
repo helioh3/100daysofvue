@@ -35,10 +35,10 @@ export default {
 
   methods: {
     add () {
-      this.$store.commit('add')
+      this.$store.commit('add', 2)
     },
     remove () {
-      this.$store.commit('remove')
+      this.$store.commit('remove', 2)
     }
   },
 };

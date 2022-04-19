@@ -13,13 +13,13 @@ import { createStore } from 'vuex'
       },
 
       mutations: {
-        add (state) {
-          state.counter++
+        add (state, value) {
+          state.counter += value
         },
-        remove (state) {
+        remove (state, value) {
           if(state.counter <= 1)
             return
-          state.counter--
+          state.counter -= value
         }
       }
     })
