@@ -1,16 +1,19 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <h2>Now Vuex</h2>
-  {{ fullName }}
+  <br>
+  <counter/>
 </template>
 
 <script>
+import Counter from '@/components/Counter.vue'
+
 import { mapState } from 'vuex'
 
 export default {
   name: 'Vuex',
   components: {
-
+    Counter
   },
 
   computed: {
