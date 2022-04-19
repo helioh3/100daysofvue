@@ -1,16 +1,25 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h2>Now Vuex</h2>
+  {{ first_name }} {{ last_name }}
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapState } from 'vuex'
 
 export default {
-  name: 'App',
+  name: 'Vuex',
   components: {
-    HelloWorld
-  }
+
+  },
+
+  computed: mapState({
+    // first_name: (state) => {
+    //   return state.first_name
+    // }
+    first_name: state => state.first_name,
+    last_name: state => state.last_name
+  }),
 }
 </script>
 
