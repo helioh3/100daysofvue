@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <h2>Now Vuex</h2>
-  {{ first_name }} {{ last_name }}
+  {{ fullName }}
 </template>
 
 <script>
@@ -13,13 +13,20 @@ export default {
 
   },
 
-  computed: mapState({
-    // first_name: (state) => {
-    //   return state.first_name
-    // }
-    first_name: state => state.first_name,
-    last_name: state => state.last_name
-  }),
+  computed: {
+    ...mapState({
+      // first_name: (state) => {
+      //   return state.first_name
+      // }
+      first_name: state => state.first_name,
+      last_name: state => state.last_name
+    }),
+
+    fullName () {
+      return `${this.first_name} ${this.last_name}`
+    }
+
+  },
 }
 </script>
 
